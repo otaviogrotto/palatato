@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palatato | Calculadora Nutricional</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <header class="cabecalho">
+        <div class="cabecalho__container">
+            <div class="cabecalho__logo">
+                <span class="logo-icone">🥗</span>
+                <strong class="logo-nome">Palatato</strong>
+            </div>
+            <nav class="navegacao" aria-label="Menu principal">
+                <ul class="navegacao__lista">
+                    <li><a href="index.html" class="navegacao__link navegacao__link--ativo">Início</a></li>
+                    <li><a href="resultados.html" class="navegacao__link">Resultados</a></li>
+                    <li><a href="sobre.html" class="navegacao__link">Sobre</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="principal">
+
+        <section class="hero" aria-labelledby="hero-titulo">
+            <div class="hero__conteudo">
+                <h1 class="hero__titulo" id="hero-titulo">Descubra o que o seu corpo precisa</h1>
+                <p class="hero__descricao">
+                    Informe seus dados e calcule seu gasto calórico diário. Receba sugestões de alimentação
+                    de acordo com o seu objetivo — tudo baseado em ciência, de graça e sem complicação.
+                </p>
+                <a href="#calculadora" class="botao botao--primario">Calcular agora</a>
+            </div>
+        </section>
+
+        <section class="calculadora" id="calculadora" aria-labelledby="calc-titulo">
+            <div class="calculadora__container">
+                <h2 class="calculadora__titulo" id="calc-titulo">Calculadora de Metabolismo Basal</h2>
+                <p class="calculadora__subtitulo">Preencha os campos abaixo com atenção.</p>
+
+                <form class="formulario" id="formCalculadora" novalidate>
+
+                    <fieldset class="formulario__grupo">
+                        <legend class="formulario__legenda">Dados pessoais</legend>
+
+                        <div class="campo">
+                            <label class="campo__label" for="idade">Idade</label>
+                            <input
+                                class="campo__input"
+                                type="number"
+                                id="idade"
+                                name="idade"
+                                placeholder="Ex.: 20"
+                                min="10"
+                                max="100"
+                                required
+                            >
+                            <span class="campo__unidade">anos</span>
+                        </div>
+
+                        <div class="campo">
+                            <label class="campo__label" for="sexo">Sexo biológico</label>
+                            <select class="campo__input campo__select" id="sexo" name="sexo" required>
+                                <option value="" disabled selected>Selecione</option>
+                                <option value="masculino">Masculino</option>
+                                <option value="feminino">Feminino</option>
+                            </select>
+                        </div>
+
+                        <div class="campo">
+                            <label class="campo__label" for="peso">Peso</label>
+                            <input
+                                class="campo__input"
+                                type="number"
+                                id="peso"
+                                name="peso"
+                                placeholder="Ex.: 70"
+                                min="30"
+                                max="300"
+                                step="0.1"
+                                required
+                            >
+                            <span class="campo__unidade">kg</span>
+                        </div>
+
+                        <div class="campo">
+                            <label class="campo__label" for="altura">Altura</label>
+                            <input
+                                class="campo__input"
+                                type="number"
+                                id="altura"
+                                name="altura"
+                                placeholder="Ex.: 1.75"
+                                min="1.0"
+                                max="2.5"
+                                step="0.01"
+                                required
+                            >
+                            <span class="campo__unidade">m</span>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="formulario__grupo">
+                        <legend class="formulario__legenda">Estilo de vida</legend>
+
+                        <div class="campo">
+                            <label class="campo__label" for="atividade">Nível de atividade física</label>
+                            <select class="campo__input campo__select" id="atividade" name="atividade" required>
+                                <option value="" disabled selected>Selecione</option>
+                                <option value="1.2">Sedentário (pouco ou nenhum exercício)</option>
+                                <option value="1.375">Levemente ativo (1–3 dias por semana)</option>
+                                <option value="1.55">Moderadamente ativo (3–5 dias por semana)</option>
+                                <option value="1.725">Muito ativo (6–7 dias por semana)</option>
+                                <option value="1.9">Extremamente ativo (atleta / trabalho pesado)</option>
+                            </select>
+                        </div>
+
+                        <div class="campo">
+                            <label class="campo__label" for="objetivo">Objetivo</label>
+                            <select class="campo__input campo__select" id="objetivo" name="objetivo" required>
+                                <option value="" disabled selected>Selecione</option>
+                                <option value="emagrecimento">Emagrecimento</option>
+                                <option value="manutencao">Manutenção do peso</option>
+                                <option value="massa">Ganho de massa muscular</option>
+                            </select>
+                        </div>
+                    </fieldset>
+
+                    <div class="formulario__acoes">
+                        <button type="submit" class="botao botao--primario botao--largo">Calcular</button>
+                        <button type="reset" class="botao botao--secundario botao--largo">Limpar</button>
+                    </div>
+
+                    <p class="formulario__erro" id="erroForm" aria-live="polite" hidden></p>
+
+                </form>
+            </div>
+        </section>
+
+        <section class="como-funciona" aria-labelledby="cf-titulo">
+            <div class="como-funciona__container">
+                <h2 class="como-funciona__titulo" id="cf-titulo">Como funciona?</h2>
+                <div class="passos">
+                    <article class="passo">
+                        <span class="passo__numero" aria-hidden="true">1</span>
+                        <h3 class="passo__titulo">Informe seus dados</h3>
+                        <p class="passo__texto">Preencha peso, altura, idade, sexo e nível de atividade no formulário acima.</p>
+                    </article>
+                    <article class="passo">
+                        <span class="passo__numero" aria-hidden="true">2</span>
+                        <h3 class="passo__titulo">Receba o cálculo</h3>
+                        <p class="passo__texto">Calculamos sua Taxa de Metabolismo Basal (TMB) pela fórmula de Harris-Benedict.</p>
+                    </article>
+                    <article class="passo">
+                        <span class="passo__numero" aria-hidden="true">3</span>
+                        <h3 class="passo__titulo">Veja o cardápio</h3>
+                        <p class="passo__texto">Com base no seu objetivo, apresentamos sugestões qualitativas de refeições saudáveis.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="rodape">
+        <div class="rodape__container">
+            <p class="rodape__texto">
+                &copy; 2026 Palatato &mdash; Projeto acadêmico para a disciplina de Introdução ao Desenvolvimento Web.
+            </p>
+            <p class="rodape__ods">
+                <span class="rodape__ods-badge" aria-label="ODS 3">ODS 3</span>
+                Saúde e Bem-Estar &mdash; UFFS Campus Chapecó/SC
+            </p>
+            <p class="rodape__aviso">
+                ⚠️ Esta ferramenta não substitui a consulta com um profissional de Nutrição habilitado.
+            </p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre | Palatato</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        <div class="cabecalho__container">
+            <div class="cabecalho__logo">
+                <span class="logo-icone"></span>
+                <strong class="logo-nome">Palatato</strong>
+            </div>
+            <nav class="navegacao" aria-label="Menu principal">
+                <ul class="navegacao__lista">
+                    <li><a href="index.html" class="navegacao__link">Início</a></li>
+                    <li><a href="resultados.html" class="navegacao__link">Resultados</a></li>
+                    <li><a href="sobre.html" class="navegacao__link navegacao__link--ativo">Sobre</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="principal">
+
+        <section class="sobre-hero" aria-labelledby="sobre-titulo">
+            <div class="sobre-hero__conteudo">
+                <h1 class="sobre-hero__titulo" id="sobre-titulo">Sobre o Palatato</h1>
+                <p class="sobre-hero__descricao">
+                    Um projeto que une tecnologia e educação alimentar a serviço da saúde pública.
+                </p>
+            </div>
+        </section>
+
+        <div class="sobre-conteudo">
+
+            <section class="sobre-secao" aria-labelledby="projeto-titulo">
+                <div class="sobre-secao__container">
+                    <h2 class="sobre-secao__titulo" id="projeto-titulo">O projeto</h2>
+                    <p>
+                        O <strong>Palatato</strong> nasceu como trabalho acadêmico para a disciplina de
+                        <em>Introdução ao Desenvolvimento Web</em> do curso de Ciência da Computação da
+                        UFFS — Campus Chapecó/SC. A proposta central é criar uma ferramenta digital
+                        simples, acessível e gratuita que auxilie qualquer pessoa a entender melhor
+                        as necessidades energéticas do próprio corpo.
+                    </p>
+                    <p>
+                        A motivação surgiu de uma constatação direta: o acesso a orientações nutricionais
+                        básicas ainda é desigual. Consultas com nutricionistas têm custo elevado, e boa parte
+                        da população não sabe nem estimar quantas calorias precisa por dia. O Palatato não
+                        resolve esse problema sozinho, mas tenta dar um primeiro passo na direção certa.
+                    </p>
+                </div>
+            </section>
+
+            <section class="sobre-secao sobre-secao--destaque" aria-labelledby="ods-titulo">
+                <div class="sobre-secao__container">
+                    <div class="ods-bloco">
+                        <div class="ods-bloco__badge" aria-hidden="true">
+                            <span class="ods-numero">3</span>
+                            <span class="ods-texto">ODS</span>
+                        </div>
+                        <div class="ods-bloco__texto">
+                            <h2 class="sobre-secao__titulo" id="ods-titulo">ODS 3 — Saúde e Bem-Estar</h2>
+                            <p>
+                                O terceiro Objetivo de Desenvolvimento Sustentável da ONU prevê assegurar uma
+                                vida saudável e promover o bem-estar para todas as pessoas, em todas as idades.
+                                Uma das metas centrais é a redução da mortalidade prematura por doenças crônicas
+                                não transmissíveis (DCNTs) como diabetes tipo 2, obesidade e hipertensão — todas
+                                fortemente ligadas a hábitos alimentares inadequados.
+                            </p>
+                            <p>
+                                O Palatato se alinha a esse objetivo ao democratizar o acesso a informações
+                                nutricionais básicas, contribuindo para a prevenção dessas condições através
+                                da educação e da consciência alimentar.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="sobre-secao" aria-labelledby="limitacoes-titulo">
+                <div class="sobre-secao__container">
+                    <h2 class="sobre-secao__titulo" id="limitacoes-titulo">Limitações e cuidados</h2>
+                    <p>
+                        A fórmula de Harris-Benedict é amplamente utilizada e validada em contextos clínicos,
+                        mas trata-se de uma <strong>estimativa estatística</strong>. Fatores como composição
+                        corporal (percentual de gordura e massa magra), condições de saúde pré-existentes,
+                        uso de medicamentos e variações hormonais afetam o metabolismo de formas que nenhuma
+                        fórmula genérica consegue capturar com precisão.
+                    </p>
+                    <p>
+                        Por isso, os resultados do Palatato devem ser encarados como um ponto de partida para
+                        reflexão — nunca como prescrição. <strong>Sempre consulte um profissional de Nutrição
+                            habilitado</strong> antes de fazer mudanças significativas na sua alimentação.
+                    </p>
+                </div>
+            </section>
+
+            <section class="sobre-secao" aria-labelledby="autor-titulo">
+                <div class="sobre-secao__container">
+                    <h2 class="sobre-secao__titulo" id="autor-titulo">Autor</h2>
+                    <div class="cartao-autor">
+                        <div class="cartao-autor__avatar" aria-hidden="true">OG</div>
+                        <div class="cartao-autor__info">
+                            <p class="cartao-autor__nome">Otávio Augusto Grotto Silva</p>
+                            <p class="cartao-autor__curso">Ciência da Computação — UFFS Chapecó/SC</p>
+                            <p class="cartao-autor__disciplina">Introdução ao Desenvolvimento Web · 2026</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+    </main>
+
+    <footer class="rodape">
+        <div class="rodape__container">
+            <p class="rodape__texto">
+                &copy; 2026 Palatato &mdash; Projeto acadêmico para a disciplina de Introdução ao Desenvolvimento Web.
+            </p>
+            <p class="rodape__ods">
+                <span class="rodape__ods-badge" aria-label="ODS 3">ODS 3</span>
+                Saúde e Bem-Estar &mdash; UFFS Campus Chapecó/SC
+            </p>
+            <p class="rodape__aviso">
+                ⚠️ Esta ferramenta não substitui a consulta com um profissional de Nutrição habilitado.
+            </p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>

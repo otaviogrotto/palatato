@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados | Palatato</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        <div class="cabecalho__container">
+            <div class="cabecalho__logo">
+                <strong class="logo-nome">Palatato</strong>
+            </div>
+            <nav class="navegacao" aria-label="Menu principal">
+                <ul class="navegacao__lista">
+                    <li><a href="index.html" class="navegacao__link">Início</a></li>
+                    <li><a href="resultados.html" class="navegacao__link navegacao__link--ativo">Resultados</a></li>
+                    <li><a href="sobre.html" class="navegacao__link">Sobre</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="principal">
+
+        <section class="resultados-hero" aria-labelledby="res-titulo">
+            <div class="resultados-hero__conteudo">
+                <h1 class="resultados-hero__titulo" id="res-titulo">Seus resultados</h1>
+                <p class="resultados-hero__descricao" id="resumoObjetivo">
+                    Veja abaixo o seu gasto calórico estimado e as sugestões de alimentação de acordo com o seu
+                    objetivo.
+                </p>
+            </div>
+        </section>
+
+        <section class="painel-resultados" aria-labelledby="painel-titulo">
+            <div class="painel-resultados__container">
+
+                <div class="aviso-sem-dados" id="avisoSemDados">
+                    <p>Você ainda não realizou o cálculo. <a href="index.html" class="link-inline">Volte à
+                            calculadora</a> e preencha seus dados.</p>
+                </div>
+
+                <div class="cartoes-metricas" id="cartoesMetricas" hidden>
+                    <article class="cartao-metrica" aria-label="Taxa de Metabolismo Basal">
+                        <h2 class="cartao-metrica__titulo">TMB</h2>
+                        <p class="cartao-metrica__valor" id="valorTMB">—</p>
+                        <p class="cartao-metrica__descricao">Taxa de Metabolismo Basal (kcal/dia)</p>
+                    </article>
+                    <article class="cartao-metrica cartao-metrica--destaque" aria-label="Gasto Energético Total">
+                        <h2 class="cartao-metrica__titulo">GET</h2>
+                        <p class="cartao-metrica__valor" id="valorGET">—</p>
+                        <p class="cartao-metrica__descricao">Gasto Energético Total (kcal/dia)</p>
+                    </article>
+                    <article class="cartao-metrica" aria-label="Meta calórica diária">
+                        <h2 class="cartao-metrica__titulo">Meta</h2>
+                        <p class="cartao-metrica__valor" id="valorMeta">—</p>
+                        <p class="cartao-metrica__descricao">Calorias diárias sugeridas (kcal/dia)</p>
+                    </article>
+                </div>
+
+                <div class="cardapio" id="cardapio" hidden>
+                    <h2 class="cardapio__titulo">Sugestão de cardápio — <span id="labelObjetivo"></span></h2>
+                    <p class="cardapio__aviso">
+                        As sugestões abaixo são orientações qualitativas e educativas. Consulte sempre um nutricionista.
+                    </p>
+                    <div class="refeicoes" id="listaRefeicoes">
+                    </div>
+                </div>
+
+                <div class="acoes-resultado" id="acoesResultado" hidden>
+                    <a href="index.html" class="botao botao--secundario">← Recalcular</a>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="explicacao-calculo" aria-labelledby="exp-titulo">
+            <div class="explicacao-calculo__container">
+                <h2 class="explicacao-calculo__titulo" id="exp-titulo">Por que esses números?</h2>
+                <div class="explicacao-calculo__texto">
+                    <p>
+                        A <strong>Taxa de Metabolismo Basal (TMB)</strong> representa a quantidade mínima de energia
+                        que o seu organismo consome para manter funções vitais em repouso absoluto — respiração,
+                        circulação, regulação da temperatura, entre outras.
+                    </p>
+                    <p>
+                        Para calculá-la, usamos a <strong>fórmula de Harris-Benedict revisada</strong>:
+                    </p>
+                    <ul class="formula-lista">
+                        <li><strong>Homens:</strong> TMB = 88,36 + (13,4 × peso) + (4,8 × altura em cm) − (5,7 × idade)
+                        </li>
+                        <li><strong>Mulheres:</strong> TMB = 447,6 + (9,25 × peso) + (3,1 × altura em cm) − (4,3 ×
+                            idade)</li>
+                    </ul>
+                    <p>
+                        O resultado é multiplicado pelo <strong>fator de atividade</strong> para obter o
+                        <strong>Gasto Energético Total (GET)</strong>, que reflete o gasto real considerando
+                        o seu estilo de vida.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="rodape">
+        <div class="rodape__container">
+            <p class="rodape__texto">
+                &copy; 2026 Palatato &mdash; Projeto acadêmico para a disciplina de Introdução ao Desenvolvimento Web.
+            </p>
+            <p class="rodape__ods">
+                <span class="rodape__ods-badge" aria-label="ODS 3">ODS 3</span>
+                Saúde e Bem-Estar &mdash; UFFS Campus Chapecó/SC
+            </p>
+            <p class="rodape__aviso">
+                ⚠️ Esta ferramenta não substitui a consulta com um profissional de Nutrição habilitado.
+            </p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>
